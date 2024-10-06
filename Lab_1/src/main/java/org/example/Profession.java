@@ -5,12 +5,13 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 @Entity
-public class Profession {
+public class Profession implements Serializable {
     @Id
     private String name;
     private int baseArmor;

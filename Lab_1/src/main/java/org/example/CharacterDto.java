@@ -9,4 +9,13 @@ public class CharacterDto {
         this.level = level;
         this.profession = profession;
     }
+    @Override
+    public String toString() {
+        return "Character DTO: name"
+                + name
+                + ", level"
+                + level
+                + ", profession"
+                + profession;
+    }
 }

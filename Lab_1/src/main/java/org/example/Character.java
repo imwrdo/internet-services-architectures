@@ -1,9 +1,10 @@
 package org.example;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Character {
+public class Character implements Serializable {
     @Id
     private String name;
     private int level;
