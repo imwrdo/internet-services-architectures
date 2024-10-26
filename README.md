@@ -7,3 +7,5 @@ This repository contains completed labs for the Internet Services Architectures 
 ## Labs Description
 1. Trying to remember Java
   - Status: Completed and Published
+2. Adding Spring boot
+  - Status: Completed and Published
