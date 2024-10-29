@@ -36,16 +36,18 @@ public class Seeder {
         List<VehicleType> vehicleTypes = new ArrayList<>();
         List<String> vehicleTypesNames = List.of("Car", "Plane", "Bike");
         for(int i = 0; i < vehicleTypesNames.size(); i++) {
+
             VehicleType vehicleType = VehicleType.builder()
                     .id(UUID.nameUUIDFromBytes(vehicleTypesNames.get(i).getBytes()))
                     .name(vehicleTypesNames.get(i))
                     .yearOfInvention(rand.nextInt(2023 - 1800 + 1) + 1800)
+                    .hasEngine(i<2)
                     .build();
             vehicleTypes.add(vehicleType);
             vts.create(vehicleType);
         }
 
-        List<String> vehicleBrands = List.of("BMW", "Audi", "Boing", "Santa Cruz");
+        List<String> vehicleBrands = List.of("BMW", "Boeing", "Santa Cruz","Audi");
         for(int i = 0; i < vehicleBrands.size(); i++) {
 
             Vehicle vehicle = Vehicle.builder()
