@@ -60,6 +60,7 @@ public class VehicleTypesController {
         return new ResponseEntity<>(VehicleTypeResponse.from(vehicleType), HttpStatus.OK);
     }
 
+    @DeleteMapping("/types/{uuid}/")
     public ResponseEntity<Void> deleteVehicleType(@PathVariable UUID uuid){
         var vehicleTypeById = vehicleTypeService.findById(uuid);
         if(vehicleTypeById.isEmpty()) return new ResponseEntity<>(HttpStatus.NOT_FOUND);
