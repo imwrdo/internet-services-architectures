@@ -33,9 +33,7 @@ public class VehicleServiceImplementation implements VehicleService {
     }
 
     @Override
-    public List<Vehicle> findByVehicleType(VehicleType vehicleType) {
-        return vehicleRepository.findByVehicleType(vehicleType);
-    }
+    public List<Vehicle> findByVehicleType(VehicleType vehicleType) { return vehicleRepository.findByVehicleType(vehicleType);}
 
     @Override
     public List<Vehicle> findByBrand(String brand) {
@@ -43,9 +41,7 @@ public class VehicleServiceImplementation implements VehicleService {
     }
 
     @Override
-    public List<Vehicle> findByYearOfProduction(int yearOfProduction) {
-        return vehicleRepository.findByYearOfProduction(yearOfProduction);
-    }
+    public List<Vehicle> findByYearOfProduction(int yearOfProduction) {return vehicleRepository.findByYearOfProduction(yearOfProduction);}
 
     @Override
     public List<Vehicle> findByNameIgnoreCase(String name) {
