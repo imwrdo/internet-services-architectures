@@ -9,3 +9,5 @@ This repository contains completed labs for the Internet Services Architectures 
   - Status: Completed and Published
 2. Adding Spring boot
   - Status: Completed and Published
+3. Adding MVC
+  - Status: Completed and Published
