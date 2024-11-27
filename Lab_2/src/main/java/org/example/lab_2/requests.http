@@ -1,10 +1,10 @@
 ### Get all vehicles
 GET http://localhost:8080/api/vehicles/
-### 2024-11-10T192738.200.json
+
 
 ### Get all vehicle types
 GET http://localhost:8080/api/types/
-### 2024-11-10T192738-1.200.json
+
 
 ### Create new vehicle type
 POST http://localhost:8080/api/types/
@@ -14,52 +14,52 @@ Content-Type: application/json
   "name": "motorcycle",
   "yearOfInvention": 1885
 }
-### 2024-11-10T192738.201.json
+
 
 ### Create new vehicle
-POST http://localhost:8080/api/types/60429d44-1546-4372-b394-69e3b9dc5af8/vehicles/
+POST http://localhost:8080/api/types/f78f5c1c-fa3d-4cdf-a9fc-11325ac0747e/vehicles/
 Content-Type: application/json
 
 {
-  "brand": "Yamaha",
+  "brand": "Suzuki",
   "yearOfProduction": 2020
 }
-### 2024-11-10T192738-1.201.json
+
 
 ### Update vehicle
-PUT http://localhost:8080/api/vehicles/16a427d5-4f61-434e-a00b-5406dd89697c/
+PUT http://localhost:8080/api/vehicles/8a30237c-6b53-41d1-bdff-93fca3040804/
 Content-Type: application/json
 
 {
   "brand": "Yamaha turbo",
   "yearOfProduction": 2020
 }
-###2024-11-10T193112-2.200.json
+
 
 ### Delete vehicle (BMW)
 DELETE http://localhost:8080/api/vehicles/bcb48ddd-ff8c-34b5-b452-ee573b4db770/
 
 ### Get all vehicles
 GET http://localhost:8080/api/vehicles/
-### 2024-11-10T193521-3.200.json
+
 
 ### Get a vehicle type
-GET http://localhost:8080/api/types/0d3adee0-5153-3c15-b350-9b4d4d75ce7b/
-### 2024-11-10T194025-4.200.json
+GET http://localhost:8080/api/types/6a09b5a8-a986-42a6-86dc-ba04615650a2/
+
 
 ### Get vehicle types
 GET http://localhost:8080/api/types/
-### 2024-11-10T194146-5.200.json
+
 
 ### Update a vehicle type
-PUT http://localhost:8080/api/types/60429d44-1546-4372-b394-69e3b9dc5af8/
+PUT http://localhost:8080/api/types/6a09b5a8-a986-42a6-86dc-ba04615650a2/
 Content-Type: application/json
 
 {
   "name": "Not car",
   "yearOfInvention": 1000
 }
-### 2024-11-10T194425-5.200.json
+
 
 ### Delete a vehicle type
-DELETE http://localhost:8080/api/types/60429d44-1546-4372-b394-69e3b9dc5af8/
+DELETE http://localhost:8080/api/types/f78f5c1c-fa3d-4cdf-a9fc-11325ac0747e/

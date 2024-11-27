@@ -1,0 +1,65 @@
+### Get all vehicles
+GET http://localhost:8080/api/vehicles
+
+
+### Get all vehicle types
+GET http://localhost:8080/api/vehicleTypes
+
+
+### Create new vehicle type
+PUT http://localhost:8080/api/vehicleTypes
+Content-Type: application/json
+
+{
+  "name": "Motorcycle",
+  "yearOfInvention": 1885
+}
+
+
+### Create new vehicle
+POST http://localhost:8080/api/vehicleTypes/5316d7d1-6e86-4f3d-a488-3464bc7d4474/vehicles
+Content-Type: application/json
+
+{
+  "brand": "Yamaha",
+  "yearOfManufacture": 2019
+}
+
+
+### Update vehicle
+PATCH http://localhost:8080/api/vehicles/3d8224e2-e1a2-48a6-840b-a557f626ceb1
+Content-Type: application/json
+
+{
+  "brand": "Yamaha turbo",
+  "yearOfProduction": 2020
+}
+
+
+### Delete vehicle (BMW)
+DELETE http://localhost:8080/api/vehicles/bcb48ddd-ff8c-34b5-b452-ee573b4db770
+
+### Get all vehicles
+GET http://localhost:8080/api/vehicles/
+
+
+### Get a vehicle type
+GET http://localhost:8080/api/vehicleTypes/0d3adee0-5153-3c15-b350-9b4d4d75ce7b
+
+
+### Get vehicle vehicleTypes
+GET http://localhost:8080/api/vehicleTypes
+
+
+### Update a vehicle type
+PATCH http://localhost:8080/api/vehicleTypes/c580c72c-734b-4728-a3c9-fa18d5751aac
+Content-Type: application/json
+
+{
+  "name": "Not car",
+  "yearOfInvention": 1600
+}
+
+
+### Delete a vehicle type
+DELETE http://localhost:8080/api/vehicleTypes/5316d7d1-6e86-4f3d-a488-3464bc7d4474
