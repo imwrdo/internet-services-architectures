@@ -1,0 +1,30 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field>
+      <label for="brand">Brand</label>
+      <input
+        matInput
+        type="text"
+        id="brand"
+        name="brand"
+        [(ngModel)]="vehicle.brand"
+      />
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <label for="yearOfManufacture">Year of manufacture</label>
+      <input
+        matInput
+        type="number"
+        id="yearOfManufacture"
+        name="yearOfManufacture"
+        oninput="this.value = parseInt(this.value);"
+        [(ngModel)]="vehicle.yearOfManufacture"
+      />
+    </mat-form-field>
+  </p>
+  <button mat-raised-button type="submit">Save</button>
+  <app-error-message [message]="message" />
+</form>

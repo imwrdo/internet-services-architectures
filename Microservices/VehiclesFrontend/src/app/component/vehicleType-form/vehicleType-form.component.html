@@ -1,0 +1,28 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field>
+      <label for="name">Name</label>
+      <input
+        matInput
+        type="text"
+        id="name"
+        name="name"
+        [(ngModel)]="vehicleType.name"
+      />
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field>
+      <label for="yearOfInvention">Year of invention</label>
+      <input
+        matInput
+        type="text"
+        id="yearOfInvention"
+        name="yearOfInvention"
+        [(ngModel)]="vehicleType.yearOfInvention"
+      />
+    </mat-form-field>
+  </p>
+  <button mat-raised-button type="submit">Save</button>
+  <app-error-message [message]="message" />
+</form>

@@ -1,0 +1,11 @@
+@if (vehicle && vehicleType) {
+<app-view-title
+  title="Edit vehicle {{ vehicle.brand }} in vehicleType {{ vehicleType.name }}"
+/>
+
+<app-vehicle-form
+  [vehicle]="vehicle"
+  [message]="message"
+  (submit)="onSubmit()"
+/>
+} @else {<app-error-message [message]="message" />}

@@ -1,0 +1,29 @@
+@if (vehicle && vehicleType) {
+<app-view-title title="Vehicle {{ vehicle.brand }}" />
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ vehicle.brand }} </mat-card-title>
+    <mat-card-subtitle>VehicleType: {{ vehicleType.name }}</mat-card-subtitle>
+    <mat-card-subtitle>Year of manufacture: {{ vehicle.yearOfManufacture }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button
+      mat-button
+      [routerLink]="[
+        '/vehicleTypes',
+        vehicleType.id,
+        'vehicles',
+        vehicle.id,
+        'edit'
+      ]"
+    >
+      Edit
+    </button>
+    <button mat-button [routerLink]="['/vehicleTypes', vehicleType.id]">
+      Show the {{ vehicleType.name }} vehicleType
+    </button>
+    <app-error-message [message]="message" />
+  </mat-card-actions>
+</mat-card>
+} @else {<app-error-message [message]="message" />}

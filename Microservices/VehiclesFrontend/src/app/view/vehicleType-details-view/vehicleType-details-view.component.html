@@ -1,0 +1,45 @@
+@if (vehicleType) {
+<app-view-title title="VehicleType {{ vehicleType.name }}" />
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ vehicleType.name }}</mat-card-title>
+    <mat-card-subtitle>Year of invention: {{ vehicleType.yearOfInvention }}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-button [routerLink]="['/vehicleTypes', vehicleType.id, 'edit']">
+      Edit
+    </button>
+    <button mat-button [routerLink]="['/vehicleType']">
+      Show all vehicleTypes
+    </button>
+  </mat-card-actions>
+</mat-card>
+<br />
+
+<app-view-title title="{{ vehicles?.vehicles?.length }} vehicles" />
+<mat-list>
+  @for (vehicle of vehicles?.vehicles; track vehicle.id) {
+  <mat-list-item>
+    <button
+      mat-button
+      [routerLink]="['/vehicleTypes', vehicleType.id, 'vehicles', vehicle.id]"
+    >
+      {{ vehicle.brand }}
+    </button>
+    <button mat-icon-button (click)="deleteVehicle(vehicle.id)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-list-item>
+  <mat-divider />
+  }
+</mat-list>
+
+<button
+  mat-raised-button
+  [routerLink]="['/vehicleTypes', vehicleType.id, 'vehicles', 'new']"
+>
+  New Vehicle
+</button>
+}
+<app-error-message [message]="message" />
