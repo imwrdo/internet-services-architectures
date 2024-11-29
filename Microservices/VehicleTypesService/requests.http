@@ -17,7 +17,7 @@ Content-Type: application/json
 
 
 ### Create new vehicle
-POST http://localhost:8080/api/vehicleTypes/5316d7d1-6e86-4f3d-a488-3464bc7d4474/vehicles
+POST http://localhost:8080/api/vehicleTypes/3b44c8e8-0f3c-4b15-b510-70ae6fc169fe/vehicles
 Content-Type: application/json
 
 {
