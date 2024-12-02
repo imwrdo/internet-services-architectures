@@ -11,3 +11,7 @@ This repository contains completed labs for the Internet Services Architectures 
   - Status: Completed and Published
 3. Adding MVC
   - Status: Completed and Published
+4. Adding REST API
+  - Status: Completed and Published
+5. Adding Angular
+  - Status: Completed and Published
