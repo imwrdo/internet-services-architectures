@@ -3,6 +3,18 @@ body {
   height: 100%;
   margin: 0;
   font-family: Roboto, sans-serif;
+  background-color: pink;
 }
 
 
+footer{
+  text-align: center;
+  margin: auto;
+  background-color:rgb(246, 167, 255);
+  bottom:0;
+  position:fixed;
+  width: 100%;
+  height: 5%;
+  padding-top: 5%;
+  color:white;
+}

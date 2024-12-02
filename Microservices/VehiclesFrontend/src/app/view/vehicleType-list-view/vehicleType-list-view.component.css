@@ -1,0 +1,14 @@
+.vt-button{
+    border-radius: 5px;
+    background-color: violet;
+    font-size:25pt;
+}
+
+.new-vt{
+    border-radius:40pt;
+    background-color:green;
+    color: white;
+    margin: auto;
+    margin-top: 50pt;
+    font-size: 40px;
+}

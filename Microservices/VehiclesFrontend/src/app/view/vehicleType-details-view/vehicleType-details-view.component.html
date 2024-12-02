@@ -1,7 +1,7 @@
 @if (vehicleType) {
 <app-view-title title="VehicleType {{ vehicleType.name }}" />
 
-<mat-card>
+<mat-card class="vt-data">
   <mat-card-header>
     <mat-card-title>{{ vehicleType.name }}</mat-card-title>
     <mat-card-subtitle>Year of invention: {{ vehicleType.yearOfInvention }}</mat-card-subtitle>
@@ -31,11 +31,11 @@
       <mat-icon>delete</mat-icon>
     </button>
   </mat-list-item>
-  <mat-divider />
+  
   }
 </mat-list>
 
-<button
+<button class="nv-create"
   mat-raised-button
   [routerLink]="['/vehicleTypes', vehicleType.id, 'vehicles', 'new']"
 >

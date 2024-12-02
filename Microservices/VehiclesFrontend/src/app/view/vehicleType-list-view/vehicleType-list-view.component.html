@@ -3,17 +3,16 @@
 <mat-list>
   @for (vehicleType of vehicleTypes?.vehicleTypes; track vehicleType.id) {
   <mat-list-item>
-    <button mat-button [routerLink]="['/vehicleTypes', vehicleType.id]">
+    <button class="vt-button" mat-button [routerLink]="['/vehicleTypes', vehicleType.id]">
       {{ vehicleType.name }}
     </button>
     <button mat-icon-button (click)="deleteVehicleType(vehicleType.id)">
       <mat-icon>delete</mat-icon>
     </button>
   </mat-list-item>
-  <mat-divider />
   }
 </mat-list>
 
-<button mat-raised-button [routerLink]="['/vehicleTypes', 'new']">
+<button class="new-vt" mat-raised-button [routerLink]="['/vehicleTypes', 'new']">
   New VehicleType
 </button>
