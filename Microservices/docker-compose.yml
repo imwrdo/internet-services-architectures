@@ -1,0 +1,63 @@
+services:
+    vehicles-frontend:
+        build: ./VehiclesFrontend
+        ports:
+            - 8080:80
+        environment:
+            - API_URL=http://backend-gateway:8080
+        networks:
+            - app-network
+
+    backend-gateway:
+        build: ./Gateway
+        environment:
+            - duck.vehicle-service.url=http://vehicles:8082/api
+            - duck.vehicleType-service.url=http://vehicles-types:8081/api
+        networks:
+            - app-network
+
+    vehicles:
+        build: ./VehicleService
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://vehicle-service-db:5432/compose-postgres
+            - SPRING_DATASOURCE_USERNAME=compose-postgres
+            - SPRING_DATASOURCE_PASSWORD=compose-postgres
+            - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+            - duck.vehicleType-service.url=http://vehicles-types:8081/api
+        depends_on:
+            - vehicle-service-db
+        networks:
+            - app-network
+
+    vehicle-service-db:
+        image: postgres:17-alpine
+        environment:
+            - POSTGRES_USER=compose-postgres
+            - POSTGRES_PASSWORD=compose-postgres
+        networks:
+            - app-network
+
+    vehicles-types:
+        build: ./VehicleTypesService
+        environment:
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://vehicle-type-service-db:5432/compose-postgres2
+            - SPRING_DATASOURCE_USERNAME=compose-postgres2
+            - SPRING_DATASOURCE_PASSWORD=compose-postgres2
+            - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+            - duck.vehicle-service.url=http://vehicles:8082/api
+        depends_on:
+            - vehicle-type-service-db
+        networks:
+            - app-network
+
+    vehicle-type-service-db:
+        image: postgres:17-alpine
+        environment:
+            - POSTGRES_USER=compose-postgres2
+            - POSTGRES_PASSWORD=compose-postgres2
+        networks:
+            - app-network
+
+networks:
+    app-network:
+        driver: bridge
