@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { VehicleTypes } from '../model/vehicleTypes';
 import { VehicleType } from '../model/vehicleType';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
