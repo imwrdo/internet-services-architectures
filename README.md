@@ -11,3 +11,10 @@ This repository contains completed labs for the Internet Services Architectures 
   - Status: Completed and Published
 3. Adding MVC
   - Status: Completed and Published
+4. Adding Microservices
+  - Status: Completed and Published
+5. Adding Angular frontend
+  - Status: Completed and Published
+6. Adding Docker & Docker Compose
+  - Status: Completed and Published
+
